@@ -1,4 +1,3 @@
-
 //second problem
 import java.util.Scanner;
 
