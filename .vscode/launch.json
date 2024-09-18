@@ -1,0 +1,69 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Java Program",
+            "request": "launch",
+            "mainClass": ""
+        },
+        {
+            "type": "java",
+            "name": "WarmUp",
+            "request": "launch",
+            "mainClass": "WarmUp",
+            "projectName": "Univer_AppliedProgramming_27a6082"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Convertor",
+            "request": "launch",
+            "mainClass": "Convertor",
+            "projectName": "Univer_AppliedProgramming_27a6082"
+        },
+        {
+            "type": "java",
+            "name": "CountOfSymbols",
+            "request": "launch",
+            "mainClass": "CountOfSymbols",
+            "projectName": "Univer_AppliedProgramming_27a6082"
+        },
+        {
+            "type": "java",
+            "name": "CountSubstringInMatrix",
+            "request": "launch",
+            "mainClass": "CountSubstringInMatrix",
+            "projectName": "Univer_AppliedProgramming_27a6082"
+        },
+        {
+            "type": "java",
+            "name": "CurrencyConvertor",
+            "request": "launch",
+            "mainClass": "CurrencyConvertor",
+            "projectName": "Univer_AppliedProgramming_27a6082"
+        },
+        {
+            "type": "java",
+            "name": "FizzBuzz",
+            "request": "launch",
+            "mainClass": "FizzBuzz",
+            "projectName": "Univer_AppliedProgramming_27a6082"
+        },
+        {
+            "type": "java",
+            "name": "SampleCalculator",
+            "request": "launch",
+            "mainClass": "SampleCalculator",
+            "projectName": "Univer_AppliedProgramming_27a6082"
+        }
+    ]
+}

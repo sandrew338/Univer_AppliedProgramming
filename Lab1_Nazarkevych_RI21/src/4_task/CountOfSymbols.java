@@ -1,36 +1,35 @@
-
 //fourth problem
+
 import java.util.Scanner;
 
 public class CountOfSymbols {
 
     public static void main(String[] args) {
-        final int LARGE_VALUE = 100;
         int index = 0, indexForArray = 0;
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
-        PairOfValues[] listPairOfValues = new PairOfValues[LARGE_VALUE];
-        while(!input.isEmpty()){
+        PairOfValues[] listPairOfValues = new PairOfValues[input.length()];
+        while (!input.isEmpty()) {
             int count = 0;
             char workingChar = input.charAt(0);
             index = input.indexOf(workingChar);
 
-                while (index >= 0) {
-                    index = input.indexOf(workingChar, index);
-                    input = input.replaceFirst(Character.toString(workingChar), "");
+            while (index >= 0) {
+                index = input.indexOf(workingChar, index);
+                input = input.replaceFirst(Character.toString(workingChar), "");
 
-                    count++;
-                }
+                count++;
+            }
 
-                PairOfValues pair = new PairOfValues(workingChar, count-1 );
-                listPairOfValues[indexForArray] = pair;
-                indexForArray++;
+            PairOfValues pair = new PairOfValues(workingChar, count - 1);
+            listPairOfValues[indexForArray] = pair;
+            indexForArray++;
 
-        
+
         }
         scanner.close();
         int i = 0;
-        while(listPairOfValues[i] != null) {
+        while (listPairOfValues[i] != null) {
             System.out.println(listPairOfValues[i].toString());
             i++;
         }
