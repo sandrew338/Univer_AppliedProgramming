@@ -15,13 +15,14 @@ public class CountOfSymbols {
             index = input.indexOf(workingChar);
 
             while (index >= 0) {
+                count++;
                 index = input.indexOf(workingChar, index);
                 input = input.replaceFirst(Character.toString(workingChar), "");
 
-                count++;
+
             }
 
-            PairOfValues pair = new PairOfValues(workingChar, count - 1);
+            PairOfValues pair = new PairOfValues(workingChar, count-1);
             listPairOfValues[indexForArray] = pair;
             indexForArray++;
 

@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,11 +10,12 @@ public class Accounts {
     }
 
     static public boolean isAccountInList(BankAccount bankAccount) {
-        for (BankAccount account : allAccounts) {
-            if (account.getAccountNumber() == bankAccount.getAccountNumber()) {
+        for (int i =0; i < allAccounts.size(); i++) {
+            if ((allAccounts.get(i)).getAccountNumber() == bankAccount.getAccountNumber()) {
                 return true;
             }
         }
         return false;
     }
+
 }

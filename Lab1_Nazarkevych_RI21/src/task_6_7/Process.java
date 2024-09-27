@@ -1,3 +1,4 @@
+
 public class Process {
 
     static Bank bank1 = new Bank("Privat");
@@ -43,4 +44,5 @@ public class Process {
         System.out.println("Andrew's USD balance (account3): " + account3.getBalance());
         System.out.println("Andrew's USD balance (account4): " + account4.getBalance());
     }
+
 }

@@ -13,7 +13,6 @@ public class CountSubstringInMatrix {
             for (int j = 0; j < matrix[i].length; j++) {
                 if (matrix[i][j].contains(regex)) {
                     ++counter;
-                    ;
                 }
             }
         }

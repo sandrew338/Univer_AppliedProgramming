@@ -4,20 +4,24 @@ import java.util.Scanner;
 
 public class SampleCalculator {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         //ASK: Where to use try catch?
         //it works without it
-        //try {
         Scanner scanner = new Scanner(System.in);
-        String expression = scanner.nextLine();
-        System.out.println(calculate(expression));
-        scanner.close();
-        // } catch (Exception e) {
-        //   System.err.println("You can use such templates \n2 + 4 = ?, \n2 + 4 = , \n2 + 4.");
-        //}
+        try {
+
+            String expression = scanner.nextLine();
+            System.out.println(calculate(expression));
+         } catch (Exception e) {
+           System.err.println("You can use such templates \n2 + 4 = ?, \n2 + 4 = , \n2 + 4.");
+
+        }
+        finally {
+            scanner.close();
+        }
     }
 
-    public static String calculate(String expression) throws Exception {
+    public static String calculate(String expression) {
         String[] arrayWithOperands = expression.split(" ");
         int result_number = countWithOperator(arrayWithOperands);
 
@@ -27,11 +31,11 @@ public class SampleCalculator {
         } else if (last_char == '=' || last_char == '?') {
             return expression.substring(0, expression.length() - 1) + "= " + result_number;
         } else {
-            throw new Exception("Valid expression");
+            throw new RuntimeException("Valid expression");
         }
     }
 
-    public static int countWithOperator(String[] result) throws Exception {
+    public static int countWithOperator(String[] result) {
         int result_number;
         switch (result[1]) {
             case "+":
@@ -45,12 +49,12 @@ public class SampleCalculator {
                 break;
             case "/":
                 if (Integer.parseInt(result[2]) == 0) {
-                    throw new Exception("Division by zero");
+                    throw new ArithmeticException("Division by zero");
                 }
                 result_number = Integer.parseInt(result[0]) / Integer.parseInt(result[2]);
                 break;
             default:
-                throw new Exception("Valid operator");
+                throw new RuntimeException("Invalid operator");
         }
         return result_number;
     }

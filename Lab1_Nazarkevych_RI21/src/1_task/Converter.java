@@ -1,7 +1,9 @@
 //first problem
 public class Converter {
     public static void main(String[] args) {
+
         System.out.println(convert(123456789));
+
     }
 
     public static String convert(int number) {
@@ -17,5 +19,8 @@ public class Converter {
         }
         return result;
     }
+
+
+
 
 }
